@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="https://www.google.com/s2/favicons?domain=leonidasesteban.com" type="image/x-icon">
+	<title>Video-Player</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="player">
+			<video class="video" id="video" src="https://media.w3.org/2010/05/sintel/trailer.mp4" width="400" poster="./images/poster.jpg"></video>
+			<div class="player-overlay">
+				<h2 class="player-title">Música para programar</h2>
+				<div class="player-actions">
+					<button class="button" id="backward" aria-label="Retroceder 10 segundos" title="Retroceder 10 segundos"></button>
+					<button class="button" id="play" aria-label="Reproducir"></button>
+					<button class="button" id="pause" hidden aria-label="Pausar"></button>
+					<button class="button" id="foreward" aria-label="Adelantar 10 segundos"></button>
+				</div>
+				<div class="player-progress">
+					<input type="range" min="0" max="100" step="1" id="progress" value="0"/>
+				</div>
+		</div>
+		</div>
+	</div>
+
+	<script src="./js/index.js">
+
+	</script>
+</body>
+</html>

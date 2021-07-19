@@ -1,0 +1,119 @@
+@import './button.css';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+
+body {
+	background-color: #43DDE6;
+	font-family: Lato,Arial, Helvetica, sans-serif;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+body::after{
+	content: '';
+	position: absolute;
+	inset-inline-start: -240px;
+	inset-block-start: -443px;
+	inline-size: 700px;
+	block-size: 700px;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 80px #00000010;
+}
+
+body::before{
+	content: '';
+	position: absolute;
+	inset-inline-end: -257px;
+	inset-block-end: -279px;
+	inline-size: 700px;
+	block-size: 700px;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 80px #00000010;
+	z-index: -1;
+}
+
+.wrapper {
+	max-inline-size: 900px;
+	margin: auto;
+}
+
+.player {
+	position: relative;
+}
+
+.player video {
+	inline-size: 100%;
+	aspect-ratio: 16/9;
+	vertical-align: middle;
+	object-fit: cover;
+}
+
+.player-title {
+	color: white;
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline-start: 20px;
+	font-size: 1.01rem;
+	font-weight: normal;
+}
+
+.player-actions {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.player-progress {
+	position: absolute;
+	inset-block-end: 0;
+	inset-inline: 0;
+	display: flex;
+	padding: 10px;
+}
+
+.player-progress input{
+	flex: 1;
+}
+
+.player-overlay {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	transition: .3s opacity;
+}
+
+.player:hover .player-overlay{
+	opacity: 1;
+}
+
+@media screen and (max-width: 600px)
+{
+
+	body::after{
+		content:'';
+		width: 250.62px;
+		height: 250.91px;
+		border-radius: 50%;
+		box-shadow: inset 0 0 0 28.64px #00000010;
+		inset-inline-start: -90px;
+		inset-block-start: -90px;
+	}
+
+	body::before{
+		inline-size: 250.62px;
+		block-size: 250.91px;
+		border-radius: 50%;
+		box-shadow: inset 0 0 0 28.64px #00000010;
+		inset-inline-end: -57.62px;
+		inset-block-end: -78.91px;
+	}
+
+	.wrapper {
+		padding-inline: 16px;
+	}
+}
